@@ -9,3 +9,16 @@ h2 {
 .well p {
     color: #bbb
 }
+
+.thumbnail {
+    min-height: 230px;
+    background-color: #2891BA
+}
+
+.green {
+    color: #04DB3E !important
+}
+
+.bold {
+    font-weight: bold
+}
