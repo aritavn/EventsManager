@@ -3,7 +3,7 @@
     <hr/>
     <div class='row'>
         <div class='col-md-6' *ngFor='let event of events'>
-            <event-thumbnail [event]='event' (eventClick)='handleEventClicked($event)'></event-thumbnail>
+            <event-thumbnail [event]='event' (click)='handleThumbnailClick(event.name)' (eventClick)='handleEventClicked($event)'></event-thumbnail>
         </div>
     </div>
 </div>
