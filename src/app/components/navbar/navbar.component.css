@@ -26,6 +26,10 @@
     margin-right: 100px
 }
 
+li > a.active {
+    background-color: #197BB1
+}
+
 @media (max-width: 1200px) {
     #searchForm {
         display: none
