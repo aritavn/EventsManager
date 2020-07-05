@@ -2,8 +2,10 @@ import { Component } from '@angular/core'
 
 @Component({
     template: `
-        <h1>404 error</h1>
-        <p>Could not find resource</p>
+        <div class='m-4'>
+            <h1>404 error</h1>
+            <p>Could not find resource</p>
+        </div>
     `
 })
 export class Error404Component {

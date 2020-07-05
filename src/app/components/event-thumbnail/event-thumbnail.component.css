@@ -1,24 +1,16 @@
+.card {
+    background-color: #5DA2D5;
+}
+
+.card-title {
+    color: #ECECEC;
+}
+
 p {
-    margin: 0px
+    color: #ECECEC;
+    margin: 0px;
 }
 
-h2 {
-    margin-top: 0px
-}
-
-.well p {
-    color: #bbb
-}
-
-.thumbnail {
-    min-height: 230px;
-    background-color: #2891BA
-}
-
-.green {
-    color: #04DB3E !important
-}
-
-.bold {
-    font-weight: bold
+.btn {
+    background-color: #F3D250;
 }

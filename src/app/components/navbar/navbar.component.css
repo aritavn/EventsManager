@@ -1,37 +1,11 @@
-.nav .navbar-nav {
-    font-size: 15px
+.navbar, .dropdown-menu {
+    background-color: #F3D250;
 }
 
-.navbar {
-    background-color: #2891BA
-}
-
-.navbar a:hover, a:active, a:visited {
-    background-color: #197BB1 !important
-}
-
-.navbar .dropdown-menu {
-    background-color: #2891BA 
-}
-
-.btn {
-    background-color: #2891BA
-}
-
-.btn:active {
-    background-color: #197BB1
-}
-
-#searchForm {
-    margin-right: 100px
+a, .btn {
+    color: #5DA2D5 !important;
 }
 
 li > a.active {
-    background-color: #197BB1
-}
-
-@media (max-width: 1200px) {
-    #searchForm {
-        display: none
-    }
+    font-weight: bold;
 }
