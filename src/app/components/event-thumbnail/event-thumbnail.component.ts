@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { Event } from '../../models/event.model' 
 
 @Component({
     selector: 'event-thumbnail',
@@ -7,7 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 })
 export class EventThumbnailComponent {
 
-    @Input() event: any
+    @Input() event: Event
     @Output() eventClick = new EventEmitter()
 
     handleClick() {
