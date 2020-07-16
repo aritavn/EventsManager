@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { EventsAppComponent } from './events-app.component'
 import { EventsListComponent } from './components/events-list/events-list.component'
@@ -28,6 +29,8 @@ import { AuthenticationService } from './services/authentication.service'
     ],
     imports: [
         BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
         RouterModule.forRoot(AppRoutes)
     ],
     providers: [
