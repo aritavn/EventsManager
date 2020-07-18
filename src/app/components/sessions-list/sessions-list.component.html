@@ -1,0 +1,11 @@
+<div class='row container my-2' *ngFor='let session of sessions'>
+    <div class='card' style='background-color: #d8d6d6;'>
+        <div class='card-body'>
+            <h4 class='card-title'>{{ session.name }}</h4>
+            <h6>{{ session.presenter }}</h6>
+            <span>Duration: {{ session.duration }}</span><br />
+            <span>Level: {{ session.level }}</span><br />
+            <span>{{ session.abstract }}</span>
+        </div>
+    </div>
+</div>

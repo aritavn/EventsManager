@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { Event } from '../../models/event.model' 
 
 @Component({
@@ -9,11 +9,6 @@ import { Event } from '../../models/event.model'
 export class EventThumbnailComponent {
 
     @Input() event: Event
-    @Output() eventClick = new EventEmitter()
-
-    handleClick() {
-        this.eventClick.emit(this.event.name)
-    }
 
     getStartTimeClass() {
         if (this.event && this.event.time ==='8:00 am')

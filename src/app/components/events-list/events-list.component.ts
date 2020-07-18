@@ -16,10 +16,6 @@ export class EventsListComponent implements OnInit {
         this.events = this.route.snapshot.data['events']
     }
 
-    handleEventClicked(data: any) {
-        console.log('received:', data)
-    }
-
     handleThumbnailClick(eventName: string) {
         this.toastrService.success(eventName)
     }

@@ -1,5 +1,5 @@
 <h1 class='my-4'>Create Session</h1>
-<div class="col-md-6">
+<div class="col-md-6 mb-4">
     <form [formGroup]="newSessionForm" (ngSubmit)="saveSession(newSessionForm.value)" autocomplete="off">
         <div class="form-group" [ngClass]="{'error': name.invalid && name.dirty}">
             <label for="sessionName">Session Name:</label>
@@ -41,6 +41,6 @@
                 class="float-right text-danger small pt-1">Cannot exceed 400 characters</em>
         </div>
         <button type='submit' [disabled]="newSessionForm.invalid" class='btn btn-primary' style='background-color: #F3D250;'>Save</button>
-        <button type='button' class='btn btn-secondary ml-1'>Cancel</button>
+        <button type='button' class='btn btn-secondary ml-1' (click)='cancel()'>Cancel</button>
     </form>
 </div>
