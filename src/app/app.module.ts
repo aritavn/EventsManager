@@ -18,6 +18,7 @@ import { EventListResolver } from './services/event-list-resolver.service'
 import { AuthenticationService } from './services/authentication.service'
 import { CreateSessionComponent } from './components/create-session/create-session.component'
 import { SessionsListComponent } from './components/sessions-list/sessions-list.component'
+import { CollapsibleComponent } from './components/collapsible/collapsible.component'
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import { SessionsListComponent } from './components/sessions-list/sessions-list.
         Error404Component,
         CreateEventComponent,
         CreateSessionComponent,
-        SessionsListComponent
+        SessionsListComponent,
+        CollapsibleComponent
     ],
     imports: [
         BrowserModule,
