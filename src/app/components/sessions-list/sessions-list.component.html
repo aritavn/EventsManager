@@ -1,4 +1,4 @@
-<div class='row container my-2' *ngFor='let session of sessions'>
+<div class='row mx-0 my-2' *ngFor='let session of sessions'>
     <div class='card w-100' style='background-color: #d8d6d6;'>
         <collapsible [title]='session.name'>
             <div session-title>
@@ -7,7 +7,7 @@
             </div>
             <div session-body>
                 <h6 class='mt-2'>{{ session.presenter }}</h6>
-                <span>Duration: {{ session.duration }}</span><br />
+                <span>Duration: {{ session.duration | duration }}</span><br />
                 <span>Level: {{ session.level }}</span><br />
                 <span>{{ session.abstract }}</span>
             </div>
