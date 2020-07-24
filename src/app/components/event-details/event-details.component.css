@@ -5,3 +5,16 @@
 a {
     cursor: pointer;
 }
+
+.btn-level {
+    background-color: #F78888;
+    color: white;
+}
+
+.btn-level:focus {
+    background-color: #d87070;
+}
+
+.active {
+    background-color: #d87070;
+}
