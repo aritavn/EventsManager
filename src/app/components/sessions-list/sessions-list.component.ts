@@ -9,11 +9,15 @@ export class SessionsListComponent implements OnChanges {
 
     @Input() sessions: Session[]
     @Input() filterBy: string
+    @Input() sortBy: string
     visibleSessions: Session[] = []
 
     ngOnChanges() {
         if (this.sessions) {
             this.filterSessions(this.filterBy)
+            this.sortBy === 'name'
+                ? this.visibleSessions.sort((s1, s2) => s1.name.localeCompare(s2.name))
+                : this.visibleSessions.sort((s1, s2) => s2.voters.length - s1.voters.length)
         }
     }
 
