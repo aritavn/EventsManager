@@ -26,11 +26,10 @@
                 </div>
             </li>
         </ul>
-        
     </div>
     <div class="mx-auto order-0">
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search Sessions" aria-label="Search">
+        <form class="form-inline" (ngSubmit)="searchSessions(searchTerm)" autocomplete="off">
+            <input [(ngModel)]="searchTerm" name="searchTerm" class="form-control mr-sm-2" type="search" placeholder="Search Sessions" aria-label="Search">
             <button class="btn my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
