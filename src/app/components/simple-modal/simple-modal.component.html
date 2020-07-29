@@ -1,0 +1,15 @@
+<div class='modal fade' id='{{ elementId }}' tabindex='-1'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class='modal-header' style='background-color: #5DA2D5; color: white;'>
+                <h4 class='modal-title'>{{ title }}</h4>
+                <button type='button' class='close' data-dismiss='modal'>
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class='modal-body p-0' style='height: 350px; overflow-y: scroll;' data-dismiss='modal'>
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

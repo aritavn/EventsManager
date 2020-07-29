@@ -20,8 +20,9 @@ import { CreateSessionComponent } from './components/create-session/create-sessi
 import { SessionsListComponent } from './components/sessions-list/sessions-list.component'
 import { CollapsibleComponent } from './components/collapsible/collapsible.component'
 import { DurationPipe } from './utils/duration.pipe'
+import { SimpleModalComponent } from './components/simple-modal/simple-modal.component'
 
-declare let toastr: Toastr
+let toastr: Toastr = window['toastr']
 
 @NgModule({
     declarations: [
@@ -35,6 +36,7 @@ declare let toastr: Toastr
         CreateSessionComponent,
         SessionsListComponent,
         CollapsibleComponent,
+        SimpleModalComponent,
         DurationPipe
     ],
     imports: [

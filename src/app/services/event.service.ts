@@ -32,15 +32,17 @@ export class EventService {
     searchSessions(searchTerm: string) {
         let results: any[] = []
 
-        events.forEach(event => {
-            let matchingSessions = event.sessions
-                .filter(session => session.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) > -1)
-                .map((session: any) => { 
-                    session.eventId = event.id
-                    return session
-                })
-            results = [...results, ...matchingSessions]
-        })
+        if (searchTerm) {
+            events.forEach(event => {
+                let matchingSessions = event.sessions
+                    .filter(session => session.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) > -1)
+                    .map((session: any) => { 
+                        session.eventId = event.id
+                        return session
+                    })
+                results = [...results, ...matchingSessions]
+            })
+        }
 
         let emitter = new EventEmitter(true)
         setTimeout(() => {

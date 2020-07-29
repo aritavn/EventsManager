@@ -28,9 +28,9 @@
         </ul>
     </div>
     <div class="mx-auto order-0">
-        <form class="form-inline" (ngSubmit)="searchSessions(searchTerm)" autocomplete="off">
+        <form class="form-inline" (ngSubmit)="searchSessions()" autocomplete="off">
             <input [(ngModel)]="searchTerm" name="searchTerm" class="form-control mr-sm-2" type="search" placeholder="Search Sessions" aria-label="Search">
-            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#searchResults">Search</button>
         </form>
     </div>
     <div class="navbar-collapse collapse dual-collapse2">
@@ -42,3 +42,17 @@
         </ul>
     </div>
 </nav>
+
+<simple-modal elementId="searchResults" title="Matching Sessions">
+    <div *ngIf="foundSessions.length === 0 && searchTerm" class='p-3'>
+        <p>No sessions match your search.</p>
+    </div>
+    <div *ngIf="foundSessions.length === 0 && !searchTerm" class='p-3'>
+        <p>Please insert a keyword to search by.</p>
+    </div>
+    <div class="list-group" *ngIf="foundSessions.length > 0">
+        <a class="list-group-item" *ngFor="let session of foundSessions" [routerLink]="['/events', session.eventId]">
+            {{ session.name }}
+        </a>
+    </div>
+</simple-modal>

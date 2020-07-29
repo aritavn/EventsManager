@@ -9,3 +9,12 @@ a, .btn {
 li > a.active {
     font-weight: bold;
 }
+
+a {
+    text-decoration: none;
+}
+
+.list-group a:hover, .list-group a:active {
+    background-color: #90CCF4;
+    color: white !important;
+}
