@@ -1,6 +1,13 @@
-<div class='card-body' (click)='toggleContent()'>
+<div class='card-body'>
     <h4 class='card-title m-0'>
-        <ng-content select='[session-title]'></ng-content>
+        <div class='row'>
+            <div class='col-10' (click)='toggleContent()'>
+                <ng-content select='[session-title]'></ng-content>
+            </div>
+            <div class='col-2'>
+                <ng-content select='[session-votes]'></ng-content>
+            </div>
+        </div>
     </h4>
     <ng-content *ngIf='visible' select='[session-body]'></ng-content>
 </div>

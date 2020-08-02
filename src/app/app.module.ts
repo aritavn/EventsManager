@@ -21,6 +21,8 @@ import { SessionsListComponent } from './components/sessions-list/sessions-list.
 import { CollapsibleComponent } from './components/collapsible/collapsible.component'
 import { DurationPipe } from './utils/duration.pipe'
 import { SimpleModalComponent } from './components/simple-modal/simple-modal.component'
+import { UpvoteComponent } from './components/upvote/upvote.component'
+import { VoterService } from './services/voter.service'
 
 let toastr: Toastr = window['toastr']
 
@@ -37,6 +39,7 @@ let toastr: Toastr = window['toastr']
         SessionsListComponent,
         CollapsibleComponent,
         SimpleModalComponent,
+        UpvoteComponent,
         DurationPipe
     ],
     imports: [
@@ -57,7 +60,8 @@ let toastr: Toastr = window['toastr']
             useValue: checkDirtyState
         },
         EventListResolver,
-        AuthenticationService
+        AuthenticationService,
+        VoterService
     ],
     bootstrap: [EventsAppComponent]
 })

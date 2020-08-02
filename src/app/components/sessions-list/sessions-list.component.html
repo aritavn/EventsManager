@@ -1,9 +1,12 @@
 <div class='row mx-0 my-2' *ngFor='let session of visibleSessions'>
     <div class='card w-100' style='background-color: #d8d6d6;'>
         <collapsible [title]='session.name'>
-            <div session-title>
+            <div session-title style='cursor: pointer'>
                 {{ session.name }}
-                <i *ngIf='session.voters.length > 3' class='fa fa-fire' style='color: #F78888'></i>
+                <i *ngIf='session.voters.length > 3' class='fa fa-fire' style='color: #F3D250'></i>
+            </div>
+            <div session-votes *ngIf='authService.isAuthenticated()' class='float-right'>
+                <upvote (vote)='toggleVote(session)' [count]='session.voters.length' [voted]='userHasVoted(session)'></upvote>
             </div>
             <div session-body>
                 <h6 class='mt-2'>{{ session.presenter }}</h6>

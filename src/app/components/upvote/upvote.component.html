@@ -1,0 +1,7 @@
+<div style='color: #F78888'>
+    <span class='h5 mr-2'>{{ count }}</span>
+    <span (click)='onClick()'>
+        <i *ngIf='voted' class='fa fa-heart'></i>
+        <i *ngIf='!voted' class='fa fa-heart' style='color: #7e7e7e'></i>
+    </span>
+</div>
