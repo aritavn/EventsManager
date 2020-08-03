@@ -23,6 +23,7 @@ import { DurationPipe } from './utils/duration.pipe'
 import { SimpleModalComponent } from './components/simple-modal/simple-modal.component'
 import { UpvoteComponent } from './components/upvote/upvote.component'
 import { VoterService } from './services/voter.service'
+import { LocationValidator } from './utils/location-validator.directive'
 
 let toastr: Toastr = window['toastr']
 
@@ -40,6 +41,7 @@ let toastr: Toastr = window['toastr']
         CollapsibleComponent,
         SimpleModalComponent,
         UpvoteComponent,
+        LocationValidator,
         DurationPipe
     ],
     imports: [
