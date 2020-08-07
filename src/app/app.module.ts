@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http'
 
 import { EventsAppComponent } from './events-app.component'
 import { EventsListComponent } from './components/events-list/events-list.component'
@@ -48,6 +49,7 @@ let toastr: Toastr = window['toastr']
         BrowserModule,
         FormsModule,
         ReactiveFormsModule,
+        HttpClientModule,
         RouterModule.forRoot(AppRoutes)
     ],
     providers: [

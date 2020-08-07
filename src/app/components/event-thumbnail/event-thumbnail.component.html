@@ -9,6 +9,7 @@
             <span *ngSwitchDefault>(Normal Start)</span>
         </p>
         <p>Price: {{ event?.price | currency:'USD' }}</p>
-        <p>Location: {{ event?.location.address }} {{ event?.location.city }}, {{ event?.location.country }}</p>
+        <p *ngIf='event?.location'>Location: {{ event.location.address }} {{ event.location.city }}, {{ event.location.country }}</p>
+        <p *ngIf='event?.onlineUrl'>Online URL: {{ event.onlineUrl }}</p>
     </div>
 </div> 
