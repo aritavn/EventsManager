@@ -13,7 +13,6 @@ import { TOASTR_TOKEN, Toastr } from './services/toastr.service'
 import { EventDetailsComponent } from './components/event-details/event-details.component'
 import { AppRoutes } from './routes'
 import { Error404Component } from './components/errors/error-404.component'
-import { EventRouteActivator } from './services/event-route-activator.service'
 import { CreateEventComponent } from './components/create-event/create-event.component'
 import { EventListResolver } from './services/event-list-resolver.service'
 import { AuthenticationService } from './services/authentication.service'
@@ -58,7 +57,6 @@ let toastr: Toastr = window['toastr']
             provide: TOASTR_TOKEN,
             useValue: toastr
         },
-        EventRouteActivator,
         {
             provide: 'canDeactivateCreateEvent',
             useValue: checkDirtyState
