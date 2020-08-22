@@ -36,7 +36,7 @@
             <a class='float-right' style='color: #F78888' (click)='addSession()'>Add Session</a>
         </div>
     </div>
-    <sessions-list *ngIf='!addMode' [sessions]='event?.sessions' [filterBy]='filterBy' [sortBy]='sortBy'></sessions-list>
+    <sessions-list *ngIf='!addMode' [eventId]='event?.id' [sessions]='event?.sessions' [filterBy]='filterBy' [sortBy]='sortBy'></sessions-list>
     <create-session *ngIf='addMode' (saveNewSession)='saveNewSession($event)' (cancelAddSession)='cancelAddSession()'>
     </create-session>
 </div>
