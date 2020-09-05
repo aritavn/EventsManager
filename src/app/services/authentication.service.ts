@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core'
 import { User } from '../models/user.model'
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { tap, catchError } from 'rxjs/operators'
-import { of } from 'rxjs'
+import { of, Observable } from 'rxjs'
 
 @Injectable()
 export class AuthenticationService {
@@ -11,7 +11,7 @@ export class AuthenticationService {
 
     constructor(private http: HttpClient) {}
 
-    loginUser(userName: string, password: string) {
+    loginUser(userName: string, password: string): Observable<any> {
         let loginInfo = {
             username: userName,
             password: password
@@ -33,7 +33,7 @@ export class AuthenticationService {
         return !!this.currentUser
     }
 
-    checkAuthenticationStatus() {
+    checkAuthenticationStatus(): Observable<any> {
         return this.http.get('/api/currentIdentity')
             .pipe(tap(data => {
                 if (data instanceof Object) {
@@ -42,8 +42,20 @@ export class AuthenticationService {
             }))
     }
 
-    updateCurrentUser(firstName: string, lastName: string) {
+    updateCurrentUser(firstName: string, lastName: string): Observable<any> {
         this.currentUser.firstName = firstName
         this.currentUser.lastName = lastName
+
+        let options = { headers: new HttpHeaders({'Content-Type': 'application/json'}) }
+
+        return this.http.put(`/api/users/${this.currentUser.id}`, this.currentUser, options)
+    }
+
+    logout(): Observable<any> {
+        this.currentUser = undefined
+
+        let options = { headers: new HttpHeaders({'Content-Type': 'application/json'})}
+
+        return this.http.post('/api/logout', {}, options)
     }
 }
