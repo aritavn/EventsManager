@@ -1,27 +1,26 @@
-# NgFundamentals
+# Events Manager - Angular Web App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+This is a website that displays a series of events and their details.
+You can create new events and add sessions to those events.
+In each event details page, you can view its sessions and order them by different categories. If you login you can also select which sessions of the event you like.
+You can also search for events by name.
+There are a lot more functionalities you can check out.
 
-## Development server
+This was developed following the Pluralsight course Angular Fundamentals.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+To run the app server run the command:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+npm run server
+```
 
-## Build
+To run the application run the following commands:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+npm install
+npm start
+```
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+and open your browser on http://localhost:4200
